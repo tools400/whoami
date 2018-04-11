@@ -1,0 +1,57 @@
+.* =================================================================== *
+.*                                                                     *
+.*  Documentation:                                                     *
+.*                                                                     *
+.*  Utility . . . : WHOAMI                                             *
+.*  Object  . . . : WHOAMI     (*PNLGRP)                               *
+.*  Source member : WHOAMIH1                                           *
+.*  Source type . : PNLGRP                                             *
+.*  Description   : Who am I - Help                                    *
+.*  Author  . . . : Thomas Raddatz   <thomas.raddatz@tools400.de>      *
+.*  Created . . . : 25.01.2017                                         *
+.*                                                                     *
+.* =================================================================== *
+.*                                                                     *
+.*  This software is free software, you can redistribute it and/or     *
+.*  modify it under the terms of the GNU General Public License (GPL)  *
+.*  as published by the Free Software Foundation.                      *
+.*                                                                     *
+.*  See GNU General Public License for details.                        *
+.*          http://www.opensource.org                                  *
+.*          http://www.opensource.org/licenses/gpl-license.html        *
+.*                                                                     *
+.* =================================================================== *
+.*  STRPREPRC Compile Options:                                         *
+.*    >>PRE-COMPILER<<                                                 *
+.*      >>CRTCMD<<    CRTPNLGRP  PNLGRP(&LI/WHOAMI) +                  *
+.*                               SRCFILE(&SL/&SF) SRCMBR(&SM);         *
+.*      >>IMPORTANT<<                                                  *
+.*        >>PARM<<    OPTION(*EVENTF);                                 *
+.*      >>END-IMPORTANT<<                                              *
+.*      >>EXECUTE<<                                                    *
+.*    >>END-PRE-COMPILER<<                                             *
+.* =================================================================== *
+:PNLGRP.
+.*
+:HELP name='WHOAMI/ALL'.
+:EHELP.
+.*--------------------------------------------------------------------
+.* Command help text
+.*--------------------------------------------------------------------
+:HELP NAME='WHOAMI'.
+Who am I? (WHOAMI) - Help
+:P.
+The WHOAMI command retrieves and displays information about the current
+thread:
+.*
+:LINES.
+User    - The user profile under which the job is run.
+System  - The current system name.
+Device  - The name of the 5250 device.
+IP      - TCP/IP address in dotted decimal form.
+:ELINES.
+:P.
+An information message is send to the command line.
+.*
+:EHELP.
+:EPNLGRP.

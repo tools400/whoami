@@ -1,0 +1,41 @@
+     /* =================================================================== */
+     /*                                                                     */
+     /*  Documentation:                                                     */
+     /*                                                                     */
+     /*  Utility . . . : WHOAMI                                             */
+     /*  Object  . . . : WHOAMI     (PGM)                                   */
+     /*  Source member : WHOAMIP1                                           */
+     /*  Source type . : MAKPGM                                             */
+     /*  Description   : Who am I - CPP                                     */
+     /*  Author  . . . : Thomas Raddatz   <thomas.raddatz@tools400.de>      */
+     /*  Created . . . : 25.01.2017                                         */
+     /*                                                                     */
+     /* =================================================================== */
+     /*                                                                     */
+     /*  This software is free software, you can redistribute it and/or     */
+     /*  modify it under the terms of the GNU General Public License (GPL)  */
+     /*  as published by the Free Software Foundation.                      */
+     /*                                                                     */
+     /*  See GNU General Public License for details.                        */
+     /*          http://www.opensource.org                                  */
+     /*          http://www.opensource.org/licenses/gpl-license.html        */
+     /*                                                                     */
+     /* =================================================================== */
+     /*  History:                                                           */
+     /*                                                                     */
+     /*  Datum       Name          Änderung                                 */
+     /*  ----------  ------------  ---------------------------------------  */
+     /*                                                                     */
+     /* =================================================================== */
+     /* STRPREPRC Compile Options:                                          */
+     /*   >>PRE-COMPILER<<                                                  */
+     /*     >>CRTCMD<<    CRTPGM    PGM(&LI/WHOAMI);                        */
+     /*     >>IMPORTANT<<                                                   */
+     /*       >>PARM<<    MODULE(&LI/WHOAMIR1);                             */
+     /*       >>PARM<<    ACTGRP(*NEW);                                     */
+     /*       >>PARM<<    DETAIL(*BASIC);                                   */
+     /*     >>END-IMPORTANT<<                                               */
+     /*     >>EXECUTE<<                                                     */
+     /*     >>CMD<<       DLTMOD MODULE(&LI/WHOAMIR*);                      */
+     /*   >>END-PRE-COMPILER<<                                              */
+     /* =================================================================== */
