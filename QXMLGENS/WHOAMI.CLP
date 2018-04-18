@@ -8,6 +8,8 @@
 /* --------------------------------------------------------------- */
              XMLGENINC  XINCLUDE(*YES)
 
+             XMLGENVRS XSRCFILE(QWHOAMI) XSRCLIB(TOOLS400) XSRCMBR(COPYRIGHT)
+
              XMLGENSET  XVAR(&SRCFILE) XVALUE(QWHOAMI)
 
 /* ---------------------------------- */
@@ -16,6 +18,11 @@
              XMLGENMBR  XMBR(A_INSTALL ) XMBRATR(CLLE  ) +
                           XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
+                          XGENCRT(*NO ) XPARAM(*BLANK)
+
+             XMLGENMBR  XMBR(A_README  ) XMBRATR(TXT) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+                          XTOSRCF(QWHOAMI   ) XOBJTYPE(*PGM) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
              XMLGENMBR  XMBR(COPYRIGHT ) XMBRATR(CLLE  ) +
