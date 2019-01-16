@@ -55,31 +55,19 @@
              DLTPNLGRP  PNLGRP(&TOLIB/WHOAMIP)
              MONMSG     MSGID(CPF2105)
 
-             DLTMOD     MODULE(&TOLIB/WHOAMIR1)
-             MONMSG     MSGID(CPF2105)
-
              DLTPGM     PGM(&TOLIB/WHOAMICPP)
              MONMSG     MSGID(CPF2105)
 
              DLTCMD     CMD(&TOLIB/WHOAMI)
              MONMSG     MSGID(CPF2105)
 
-
-     /* -------------------------------- */
-     /*  Create modules                  */
-     /* -------------------------------- */
-             CRTRPGMOD  MODULE(&TOLIB/WHOAMIR1) +
-                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(WHOAMIR1) +
-                          DBGVIEW(*LIST) TRUNCNBR(*NO) +
-                          TGTRLS(&TGTRLS)
-             DLTSPLF    FILE(WHOAMIR1 ) JOB(*) SPLNBR(*LAST)
-             MONMSG     MSGID(CPF0000)
-
      /* -------------------------------- */
      /*  Create programs                 */
      /* -------------------------------- */
-             CRTPGM     PGM(&TOLIB/WHOAMICPP) MODULE(&TOLIB/WHOAMIR1) +
-                          ACTGRP(*NEW) DETAIL(*BASIC) +
+             CRTBNDRPG  PGM(&TOLIB/WHOAMICPP) +
+                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(*PGM) +
+                          DBGVIEW(*LIST) TRUNCNBR(*NO) +
+                          DFTACTGRP(*NO) ACTGRP(*NEW) +
                           TGTRLS(&TGTRLS)
              DLTSPLF    FILE(WHOAMICPP) JOB(*) SPLNBR(*LAST)
              MONMSG     MSGID(CPF0000)
@@ -87,8 +75,8 @@
      /* -------------------------------- */
      /*  Create panel groups             */
      /* -------------------------------- */
-             CRTPNLGRP  PNLGRP(&TOLIB/WHOAMIP) SRCFILE(&SRCLIB/&SRCFILE) +
-                          SRCMBR(WHOAMIP)
+             CRTPNLGRP  PNLGRP(&TOLIB/WHOAMIP) +
+                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(*PNLGRP)
              DLTSPLF    FILE(WHOAMIP  ) JOB(*) SPLNBR(*LAST)
              MONMSG     MSGID(CPF0000)
 
@@ -96,14 +84,9 @@
      /*  Create commands                 */
      /* -------------------------------- */
              CRTCMD     CMD(&TOLIB/WHOAMI) PGM(&TOLIB/WHOAMICPP) +
-                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(WHOAMI) +
+                          SRCFILE(&SRCLIB/&SRCFILE) SRCMBR(*CMD) +
                           HLPPNLGRP(&TOLIB/WHOAMIP) HLPID(WHOAMI)
              DLTSPLF    FILE(WHOAMI   ) JOB(*) SPLNBR(*LAST)
              MONMSG     MSGID(CPF0000)
-
-     /* -------------------------------- */
-     /*  Delete obsolete objects         */
-     /* -------------------------------- */
-             DLTMOD     MODULE(&TOLIB/WHOAMIR1)
 
              ENDPGM
