@@ -1,7 +1,0 @@
-**free
-      /if not defined(COPYRIGHT_DSPEC)
-       ctl-opt copyright('V1.1 - 16.01.2019 - mailto: thomas.raddatz@tools400.de');
-      /eof
-      /endif
-       dcl-c WHOAMI_VERSION '1.1.0';
-       dcl-c WHOAMI_DATE    '16.01.2019';

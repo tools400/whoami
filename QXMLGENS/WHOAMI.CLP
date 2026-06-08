@@ -19,7 +19,7 @@
 /* -------------------------------------------------------------------------- */
              XMLGENINC  XINCLUDE(*YES)
 
-             XMLGENVRS XSRCFILE(QWHOAMI) XSRCLIB(TOOLS400) XSRCMBR(COPYRIGHT)
+             XMLGENVRS XSRCFILE(QWHOAMI) XSRCLIB(WHOAMID) XSRCMBR(COPYRIGHT)
 
              XMLGENSET  XVAR(&SRCFILE) XVALUE(QWHOAMI)
 
@@ -27,37 +27,37 @@
 /*  Deploy source member              */
 /* ---------------------------------- */
              XMLGENMBR  XMBR(A_INSTALL ) XMBRATR(CLLE  ) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
              XMLGENMBR  XMBR(A_README  ) XMBRATR(TXT) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*PGM) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
-             XMLGENMBR  XMBR(COPYRIGHT ) XMBRATR(CLLE  ) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+             XMLGENMBR  XMBR(COPYRIGHT ) XMBRATR(RPGLE ) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
              XMLGENMBR  XMBR(WHOAMI    ) XMBRATR(CMD   ) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
              XMLGENMBR  XMBR(WHOAMIP   ) XMBRATR(PNLGRP) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
-             XMLGENMBR  XMBR(WHOAMIR1  ) XMBRATR(RPGLE ) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+             XMLGENMBR  XMBR(WHOAMICPP ) XMBRATR(RPGLE ) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
              XMLGENMBR  XMBR(WHOAMICPP ) XMBRATR(MAKPGM ) +
-                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(TOOLS400) +
+                          XFROMSRCF(QWHOAMI   ) XFROMSRCL(WHOAMID) +
                           XTOSRCF(QWHOAMI   ) XOBJTYPE(*FILE  ) +
                           XGENCRT(*NO ) XPARAM(*BLANK)
 
