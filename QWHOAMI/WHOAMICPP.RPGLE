@@ -48,7 +48,11 @@ ctl-opt debug(*yes);
 /if defined(CRTBNDRPG)
 ctl-opt dftactgrp(*no) actgrp(*new);
 /endif
+/if defined(IFS_BUILD)
+/include 'COPYRIGHT.RPGLE'
+/else
 /include QWHOAMI,COPYRIGHT
+/endif
 
 // Send Program Message (QMHSNDPM) API
 dcl-pr QMHSNDPM extpgm('QMHSNDPM');
