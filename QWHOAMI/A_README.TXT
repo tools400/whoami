@@ -6,15 +6,15 @@ when executed on a IBM i (AS/400) command line.
 
 The attributes displayed are:
 
- • User name
- • System name
- • Device name
- • TCP/IP address
+ * User name
+ * System name
+ * Device name
+ * TCP/IP address
 
 The utility uses the following APIs:
 
- • Retrieve Device Description (QDCRDEVD) API
- • Retrieve Network Attributes (QWCRNETA) API
+ * Retrieve Device Description (QDCRDEVD) API
+ * Retrieve Network Attributes (QWCRNETA) API
 
 It uses the name of the job that called WHOAMI as the devices name 
 for the QDCRDEVD API, because for interactive jobs the job name
